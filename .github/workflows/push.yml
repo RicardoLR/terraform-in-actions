@@ -1,10 +1,19 @@
-- name: Configure AWS Credentials
-  uses: aws-actions/configure-aws-credentials@v1
-  with:
-   role-to-assume: arn:aws:iam::612281548001:role/terraform-github-actions
-   aws-region: us-east-1
+name: CI
+on:
+  push:
+    branches:
+      - actions
+  pull_request:
+    branches:
+      - actions
+  workflow_dispatch:
 
-  jobs:
+permissions:
+  id-token: write
+  contents: write
+  pull-requests: write
+  
+jobs:
   build:
     name: build
     permissions:
@@ -20,3 +29,4 @@
           role-session-name: GithubActionsSession
       
       - run: aws sts get-caller-identity
+
