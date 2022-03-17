@@ -21,7 +21,7 @@ jobs:
       contents: write
     runs-on: ubuntu-18.04
     steps:
-      - name: Configure AWS Credentials
+      - name: Configure AWS Credentials rick
         uses: aws-actions/configure-aws-credentials@master
         with:
           aws-region: us-east-1
@@ -29,4 +29,3 @@ jobs:
           role-session-name: GithubActionsSession
       
       - run: aws sts get-caller-identity
-
