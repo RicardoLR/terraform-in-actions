@@ -29,3 +29,4 @@ jobs:
           role-session-name: GithubActionsSession
       
       - run: aws sts get-caller-identity
+
