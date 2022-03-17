@@ -1,7 +1,7 @@
 - name: Configure AWS Credentials
   uses: aws-actions/configure-aws-credentials@v1
   with:
-   role-to-assume: arn:aws:iam::612281548001:role/my-github-actions-role
+   role-to-assume: arn:aws:iam::612281548001:role/terraform-github-actions
    aws-region: us-east-1
 
   jobs:
